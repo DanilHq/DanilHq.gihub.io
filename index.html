@@ -40,8 +40,31 @@
   ======================================================== -->
   <style>
     .logo {
-      padding-top: 20px;
+      /* padding-top: 20px; */
       margin-left: -50px;
+
+    }
+
+    .logo img {
+      width: 60px;
+      height: 60px;
+    }
+
+    @media(max-width:768px) {
+      .logo {
+        padding-top: 0px;
+        margin-left: 0px;
+
+      }
+
+      .logo img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .logo h1 a {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -51,8 +74,7 @@
   <header id="header" class="fixed-top d-flex align-items-center header-transparent ">
     <div class="container d-flex align-items-center justify-content-between">
       <div class="logo d-flex align-items-center ">
-        <a href="index.html"><img src="assets/img/og.png" alt="" class="img-fluid"
-            style="width: 80px;height: 80px;"></a>
+        <a href="index.html"><img src="assets/img/og.png" alt="" class="img-fluid"></a>
         <h1><a href="index.html">PPMQ ANNUR</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
       </div>
@@ -161,7 +183,6 @@
                 di dalam Al-Qur'an </li>
               <li><i class="ri-check-double-line"></i> Melahirkan generasi yang istiqomah membaca Al-Qur'an</li>
             </ul>
-            <a href="#" class="btn-learn-more">Learn More</a>
           </div>
         </div>
 
