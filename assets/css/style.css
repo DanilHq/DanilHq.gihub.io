@@ -79,7 +79,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  height: 70px;
+  height: 90px;
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
@@ -95,7 +95,7 @@ h6 {
 }
 
 #header .logo h1 {
-  font-size: 28px;
+  font-size: 20px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -348,10 +348,10 @@ h6 {
   position: relative;
   /* background: linear-gradient(0deg, rgb(42, 44, 57) 0%, rgb(51, 54, 74) 100%); */
   padding: 0;
-  background-image: url(../img/1.jpeg);
+  background-image: url(../img/1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-position-y: -25px; */
+  /* background-position-y: 25px; */
 }
 
 #hero::after {
@@ -374,19 +374,19 @@ h6 {
   text-align: center;
   position: relative;
   height: 70vh;
-
   padding-top: 60px;
 }
 
 #hero h2 {
   color: #fff;
-  margin-bottom: 30px;
-  font-size: 48px;
-  font-weight: 700;
+  margin-bottom: 0px;
+  font-size: 40px;
+  font-weight: 900;
 }
 
 #hero p {
   width: 80%;
+  font-size: 2rem;
   animation-delay: 0.4s;
   margin: 0 auto 30px auto;
   color: #fff;
@@ -547,62 +547,94 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about {
-  padding-top: 80px;
+/* Style untuk label teks "Profile" di atas gambar */
+
+
+.profil .title {
+  margin-left: 10px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-size: 18px;
 }
 
-.about .content h3 {
-  font-weight: 600;
-  font-size: 26px;
-}
-
-.about .content ul {
-  list-style: none;
+.profil {
   padding: 0;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
 }
 
-.about .content ul li {
-  padding-left: 28px;
+.profil .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.profil .profile-title {
   position: relative;
 }
 
-.about .content ul li+li {
-  margin-top: 10px;
-}
-
-.about .content ul i {
+.profil .profile-label {
   position: absolute;
-  left: 0;
-  top: 2px;
-  font-size: 20px;
-  color: #ef6603;
-  line-height: 1;
+  top: 10px;
+  left: 10px;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  z-index: 10;
+  text-transform: uppercase;
+  animation: zoom-out 1s ease-out;
 }
 
-.about .content p:last-child {
-  margin-bottom: 0;
+.profil img {
+  max-width: 75%;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20px;
 }
 
-.about .content .btn-learn-more {
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 32px;
-  border-radius: 5px;
-  transition: 0.3s;
-  line-height: 1;
-  color: #ef6603;
-  animation-delay: 0.8s;
-  margin-top: 6px;
-  border: 2px solid #ef6603;
+.profil .col-lg-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
 }
 
-.about .content .btn-learn-more:hover {
-  background: #ef6603;
-  color: #fff;
-  text-decoration: none;
+.profil h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  align-self: flex-start;
+}
+
+.profil p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .profil .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profil img {
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+  }
+
+  .profil h2 {
+    align-self: center;
+  }
+
+  .profile-label {
+    left: 50%;
+    transform: translate(-50%);
+  }
 }
 
 /*--------------------------------------------------------------
@@ -743,194 +775,159 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Pendidikan
+# Produk
 --------------------------------------------------------------*/
-.pendidikan .icon-box {
-  padding: 40px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 30px;
-  background: #fff;
-  box-shadow: 0 2px 29px 0 rgba(68, 88, 144, 0.12);
-  transition: all 0.4s ease-in-out;
-  width: 100%;
-  height: 100%;
+
+.produk-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
 }
 
-.pendidikan .icon-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 2px 35px 0 rgba(68, 88, 144, 0.2);
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.pendidikan .icon {
-  position: absolute;
-  left: -20px;
-  top: calc(50% - 30px);
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
 }
 
-.pendidikan .icon i {
-  font-size: 64px;
-  line-height: 1;
-  transition: 0.5s;
+.section-title p {
+  font-size: 1.2rem;
+  color: #555;
 }
 
-.pendidikan .title {
-  margin-left: 10px;
-  font-weight: 700;
-  margin-bottom: 25px;
-  font-size: 18px;
+.produk-item {
+  margin-bottom: 50px;
 }
 
-.pendidikan .title a {
-  color: #2a2c39;
-  transition: ease-in-out 0.3s;
+.produk-item img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
 }
 
-.pendidikan .title a:hover {
-  color: #ef6603;
+.produk-item h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
 }
 
-.pendidikan .description {
-  font-size: 14px;
-  margin-left: 30px;
-  line-height: 24px;
-  margin-bottom: 0;
+.produk-item p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .produk-item {
+    flex-direction: column;
+  }
+
+  .produk-item img {
+    margin-bottom: 20px;
+    max-width: 90%;
+  }
+
+  .produk-item h2 {
+    text-align: center;
+  }
+
+  .produk-item p {
+    text-align: center;
+  }
 }
 
 /*--------------------------------------------------------------
-# Portfolio
+# Blog
 --------------------------------------------------------------*/
-.kegiatan #portfolio-flters {
-  list-style: none;
-  margin-bottom: 20px;
+.blog-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
 }
 
-.kegiatan #portfolio-flters li {
-  cursor: pointer;
-  display: inline-block;
-  margin: 0 0 10px 10px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #444444;
-  transition: all 0.3s ease-in-out;
-}
-
-.kegiatan #portfolio-flters li::before {
-  content: "[";
-  margin-right: 6px;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 400;
-  transition: all 0.3s ease-in-out;
-}
-
-.kegiatan #portfolio-flters li::after {
-  content: "]";
-  margin-left: 6px;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 400;
-  transition: all 0.3s ease-in-out;
-}
-
-.kegiatan #portfolio-flters li:hover,
-.kegiatan #portfolio-flters li.filter-active {
-  color: #ef6603;
-}
-
-.kegiatan #portfolio-flters li.filter-active::before,
-.kegiatan #portfolio-flters li.filter-active::after {
-  color: #ef6603;
-}
-
-.kegiatan .portfolio-item {
-  margin-bottom: 30px;
-}
-
-.kegiatan .portfolio-item .portfolio-img {
-  overflow: hidden;
-}
-
-.kegiatan .portfolio-item .portfolio-img img {
-  transition: all 0.8s ease-in-out;
-}
-
-.kegiatan .portfolio-item .portfolio-info {
-  opacity: 0;
-  position: absolute;
-  left: 15px;
-  bottom: 0;
-  z-index: 3;
-  right: 15px;
-  transition: all ease-in-out 0.3s;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px 15px;
-}
-
-.kegiatan .portfolio-item .portfolio-info h4 {
-  font-size: 18px;
-  color: #fff;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 0px;
-}
-
-.kegiatan .portfolio-item .portfolio-info p {
-  color: #fedac0;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.kegiatan .portfolio-item .portfolio-info .preview-link,
-.kegiatan .portfolio-item .portfolio-info .details-link {
-  position: absolute;
-  right: 40px;
-  font-size: 24px;
-  top: calc(50% - 18px);
-  color: #fff;
-  transition: 0.3s;
-}
-
-.kegiatan .portfolio-item .portfolio-info .preview-link:hover,
-.kegiatan .portfolio-item .portfolio-info .details-link:hover {
-  color: #fd9f5b;
-}
-
-.kegiatan .portfolio-item .portfolio-info .details-link {
-  right: 10px;
-}
-
-.kegiatan .portfolio-item .portfolio-links {
-  opacity: 0;
-  left: 0;
-  right: 0;
+.section-title {
   text-align: center;
-  z-index: 3;
-  position: absolute;
-  transition: all ease-in-out 0.3s;
+  margin-bottom: 40px;
 }
 
-.kegiatan .portfolio-item .portfolio-links a {
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.section-title p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.blog-item {
+  margin-bottom: 40px;
+}
+
+.blog-item img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.blog-item h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.blog-item p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background-color: #ff6600;
   color: #fff;
-  margin: 0 2px;
-  font-size: 28px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 15px;
   display: inline-block;
-  transition: 0.3s;
 }
 
-.kegiatan .portfolio-item .portfolio-links a:hover {
-  color: #fd9f5b;
+.btn-primary:hover {
+  background-color: #e65500;
+  transition: background-color 0.3s ease;
 }
 
-.kegiatan .portfolio-item:hover .portfolio-img img {
-  transform: scale(1.2);
+@media (max-width: 768px) {
+  .blog-item {
+    flex-direction: column;
+  }
+
+  .blog-item img {
+    margin-bottom: 20px;
+    max-width: 90%;
+  }
+
+  .blog-item h3 {
+    text-align: center;
+  }
+
+  .blog-item p {
+    text-align: center;
+  }
+
+  .btn-primary {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-.kegiatan .portfolio-item:hover .portfolio-info {
-  opacity: 1;
-}
 
 /*--------------------------------------------------------------
 # Portfolio Details
@@ -997,91 +994,7 @@ section {
   padding: 0;
 }
 
-/*--------------------------------------------------------------
-# Team
---------------------------------------------------------------*/
-.pengurus {
-  background: #fff;
-  padding: 60px 0;
-}
 
-.pengurus .member {
-  margin-bottom: 20px;
-  overflow: hidden;
-  border-radius: 5px;
-  background: #fff;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
-
-.pengurus .member .member-img {
-  position: relative;
-  overflow: hidden;
-}
-
-.pengurus .member .social {
-  position: absolute;
-  left: 0;
-  bottom: 30px;
-  right: 0;
-  opacity: 0;
-  transition: ease-in-out 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pengurus .member .social a {
-  transition: color 0.3s;
-  margin: 0 3px;
-  border-radius: 50px;
-  width: 36px;
-  height: 36px;
-  background: rgba(239, 102, 3, 0.8);
-  transition: ease-in-out 0.3s;
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pengurus .member .social a:hover {
-  background: #fc8129;
-}
-
-.pengurus .member .social i {
-  font-size: 18px;
-  line-height: 0;
-}
-
-.pengurus .member .member-info {
-  padding: 25px 15px;
-}
-
-.pengurus .member .member-info h4 {
-  font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 18px;
-  color: #2a2c39;
-}
-
-.pengurus .member .member-info span {
-  display: block;
-  font-size: 13px;
-  font-weight: 400;
-  color: #aaaaaa;
-}
-
-.pengurus .member .member-info p {
-  font-style: italic;
-  font-size: 14px;
-  line-height: 26px;
-  color: #777777;
-}
-
-.pengurus .member:hover .social {
-  opacity: 1;
-  bottom: 15px;
-}
 
 /*--------------------------------------------------------------
 # Contact Section
